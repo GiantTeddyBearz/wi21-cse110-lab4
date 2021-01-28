@@ -4,18 +4,18 @@
 2. prints discounted price  
 3. prints finalPrice  
 4. It returns [50, 100, 150].  It correctly iterates through the for loop and prints the discounted prices through the given calculation  
-  TODO:
-5. 
-6. 
-7. 
-8.  
+  
+5. referenceError because i is a local variable of the for loop.  
+6. referenceError because discountedPrice is a local variable of the for loop.  
+7. It should be able to return the finalPrice assuming the rest of the variables are declared properly.  This is because it is declared before the loop.  
+8. Assuming it is able to return it will return `[50, 100, 150]`.  As it is, it will not reach the return due to referenceErrors.
 
-9. Should have referenceerror because i is a local variable of the for loop (let supports this)  
-10. There should be another referenceError because discountedPrice is a local variable inside the code block.
-11. finalPrice has an error because it is reassigned in the loop. However, if the code goes to the end, it will log 0.  
-12. discounted once again should have an error during the loop (const reassignment), so we are not expecting a return.  If anything were to return, we would expect an empty array.
-
-## Data Types
+9. Should have referenceError because i is a local variable of the for loop (let supports this)  
+10. There should be another referenceError because discountedPrice is a local variable inside the code block.  
+11. finalPrice has an error because it is reassigned in the loop. However, if we removed these errors, it should log 0 as it is a constant which should remain unchanged.    
+12. discounted once again should have an error during the loop (const reassignment), so we are not expecting a return.  If anything were to return, the array could be non-empty as the constant is simply setting the reference to the array. We can still push to it, but this is bad programming.  If we did push, the values would be `[50, 100, 150]`.  
+  
+## Data Types  
 13.  A. student.name  
      B. student.["Grad Year"]  
      C. student.greeting  
